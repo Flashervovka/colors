@@ -1,0 +1,65 @@
+.flex-container{
+    display:flex;
+    justify-content: center;
+}
+.flex-column-container{
+    display:flex;
+    flex-direction:column ;
+}
+
+.flex-list-container{
+    display: flex;
+    width: 830px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex-controlls-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-controlls-container img{
+    margin: 0 10px 0 10px;
+}
+
+.mainHeader{
+    text-align: center;
+}
+
+.colorItemContainer{
+    margin: 12px;
+}
+
+.color{
+    width: 54px;
+    height: 54px;
+    border-radius: 5px;
+    align-self:center;
+}
+.colorBlock{
+    align-self:center;
+}
+.inputField{
+    align-self: center;
+}
+
+.inputField input{
+    height: 40px;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+.inputField button{
+    height: 45px;
+    width: 176px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.colorItem{
+    width: 180px;
+    height: 235px;
+    border: 1px solid grey;
+    border-radius: 8px;
+    justify-content: space-around;
+}
