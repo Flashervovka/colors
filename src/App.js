@@ -12,11 +12,12 @@ class App extends Component {
 
   onAddColor(color){
     this.setState({colorsList:[...this.state.colorsList,{color:color,itemIndex:this.state.itemIndex,isFavorite:false}],itemIndex:this.state.itemIndex+1});
+    ls.set('colorsAppState',{colorsList:[...this.state.colorsList,{color:color,itemIndex:this.state.itemIndex,isFavorite:false}],itemIndex:this.state.itemIndex+1})
   }
 
   onRemoveColor(itemIndex){
     this.setState({colorsList:[...this.state.colorsList.filter(item => item.itemIndex!==itemIndex)]})
-    ls.set('colorsAppState',{colorsList:this.state.colorsList.filter(item => (item.isFavorite && item.itemIndex!==itemIndex)),itemIndex:this.state.itemIndex})
+    ls.set('colorsAppState',{colorsList:this.state.colorsList.filter(item => (/*item.isFavorite && */item.itemIndex!==itemIndex)),itemIndex:this.state.itemIndex})
   }
 
   onSetFavorite(itemIndex){
@@ -25,7 +26,8 @@ class App extends Component {
           return element
     });
     this.setState({colorsList:[...result]})
-    ls.set('colorsAppState',{colorsList:this.state.colorsList.filter(item => item.isFavorite),itemIndex:this.state.itemIndex})
+    /*ls.set('colorsAppState',this.state);*/
+    ls.set('colorsAppState',{colorsList:result/*this.state.colorsList.filter(item => item.isFavorite)*/,itemIndex:this.state.itemIndex})
   }
 
   render(){
